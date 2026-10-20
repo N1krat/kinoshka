@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using kino.Models;
 using Microsoft.AspNetCore.Mvc;
-
+// cooment for understanding off the cod
 [ApiController]
 [Route("api/[controller]")]
 public class FilmsController : ControllerBase

@@ -1,0 +1,12 @@
+﻿[
+  {
+    "email": "admin@kino.md",
+    "password": "admin123",
+    "role": "Admin"
+  },
+  {
+    "email": "user@kino.md",
+    "password": "user123",
+    "role": "User"
+  }
+]

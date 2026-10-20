@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<h1>@ViewData["Title"]</h1>
+
+<main class="auth-card">
+    <form method="post">
+        <h1>Cont nou</h1>
+        <p class="auth-sub">Completează câmpurile de mai jos.</p>
+
+        <label for="Name">Nume</label>
+        <input id="Name" name="Name" type="text" autocomplete="name" />
+
+        <label for="Email">Email</label>
+        <input id="Email" name="Email" type="email" autocomplete="email" />
+
+        <label for="Password">Parolă</label>
+        <input id="Password" name="Password" type="password" autocomplete="new-password" />
+
+        <label for="ConfirmPassword">Confirmă parola</label>
+        <input id="ConfirmPassword" name="ConfirmPassword" type="password" autocomplete="new-password" />
+
+        <button type="submit">Creează cont</button>
+
+        <p class="auth-switch">Ai deja cont? <a href="/Account/Login">Autentifică-te</a></p>
+    </form>
+</main>

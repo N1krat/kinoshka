@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"]</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/kino.styles.css" asp-append-version="true"/>
+</head>
+<body>
+@{
+    var action = ViewContext.RouteData.Values["action"]?.ToString();
+    string Active(string a) => string.Equals(action, a, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+}
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand kino-brand" asp-controller="Home" asp-action="Index">KINO</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Movies">FILME</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Program">PROGRAM</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Theaters">CINEMATOGRAFE</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="News">NOUTĂȚI</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Shop">SHOP</a></li>
+                </ul>
+
+                <div class="nav-extra d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+                    <a class="btn btn-kino" asp-controller="Account" asp-action="Login">
+                        <i class="bi bi-unlock-fill me-1"></i> Login
+                    </a>
+
+                    <div class="lang-switch d-flex gap-2">
+                        <a href="?culture=ro" class="lang active">RO</a>
+                        <a href="?culture=ru" class="lang">RU</a>
+                        <a href="?culture=en" class="lang">EN</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="border-top footer text-muted text-center">
+    <div class="container">
+        &copy; 2026 - kino - <a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

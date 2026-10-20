@@ -1,0 +1,24 @@
+﻿@model List<kino.Models.Film>
+@{
+    ViewData["Title"] = "Movies";
+}
+<link rel="stylesheet" href="~/css/films.css" asp-append-version="true" />
+
+<h1>@ViewData["Title"]</h1>
+
+<div id="films-list">
+    @foreach (var film in Model)
+    {
+        <article class="film-card">
+            <div class="film-poster">
+                <img src="~/@film.Poster" alt="@film.Title" loading="lazy" onerror="this.style.display='none'">
+                <span class="film-badge">@film.Genre</span>
+            </div>
+            <div class="film-info">
+                <h2>@film.Title</h2>
+                <p class="film-meta">@film.Year · @film.Duration min</p>
+                <a href="#" class="film-btn">Detalii</a>
+            </div>
+        </article>
+    }
+</div>

@@ -1,8 +1,8 @@
 ﻿[
   { "id": 1, "title": "Inception", "genre": "Sci-Fi", "duration": 148, "year": 2010, "poster": "img/inception.jpg" },
-  { "id": 2, "title": "The Godfather", "genre": "Crime", "duration": 175, "year": 1972, "poster": "img/godfather.jpg" },
-  { "id": 3, "title": "Interstellar", "genre": "Sci-Fi", "duration": 169, "year": 2014, "poster": "img/interstellar.jpg" },
-  { "id": 4, "title": "The Dark Knight", "genre": "Action", "duration": 152, "year": 2008, "poster": "img/dark-knight.jpg" },
+  { "id": 2, "title": "The aggdd", "genre": "Crime", "duration": 175, "year": 22222, "poster": "img/godfather.jpg" },
+  { "id": 3, "title": "adgadgag", "genre": "Sci-Fi", "duration": 169, "year": 2014, "poster": "img/interstellar.jpg" },
+  { "id": 4, "title": "The Dark Knight", "genre": "Action", "duration": 22222, "year": 2008, "poster": "img/dark-knight.jpg" },
   { "id": 5, "title": "Forrest Gump", "genre": "Drama", "duration": 142, "year": 1994, "poster": "img/forrest-gump.jpg" },
-  { "id": 6, "title": "The Grand Budapest Hotel", "genre": "Comedy", "duration": 99, "year": 2014, "poster": "img/grand-budapest.jpg" }
+  { "id": 6, "title": "adgadgadga Grand Budapest Hotel", "genre": "Comedy", "duration": 99, "year": 2014, "poster": "img/grand-budapest.jpg" }
 ]

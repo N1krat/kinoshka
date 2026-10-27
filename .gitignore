@@ -1,2 +1,6 @@
 *.log
 temp/
+.env
+*.log
+*.tmp
+temp/
